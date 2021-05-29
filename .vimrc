@@ -23,3 +23,4 @@ set incsearch "quando buscar por uma palavra, ele vai marcando enquanto escreve
 set hlsearch "mostra todas os resultados encontrados
 "esconde a marcacao da ultima busca usando comando ':<Enter><Enter>"
 nnoremap <silent> <Enter> :noh<Enter><Enter>
+1

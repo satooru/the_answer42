@@ -1,0 +1,10 @@
+# git e uma ferramenta para rastrear as versoes dos arquivos de um projeto
+
+# o que e branch?
+uma linha do tempo paralela (back to the future)
+ramificacao do projeto, permite trabalhar no mesmo projeto sem conflitar com o desenvolvimento de outras pessoas
+
+
+# comandos
+
+git status - mostra branch em que estamos e quais sao os arquivos que foram modificados
