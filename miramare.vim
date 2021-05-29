@@ -1,0 +1,1 @@
+/home/msatoru-/.vim/colors/miramare.vim
