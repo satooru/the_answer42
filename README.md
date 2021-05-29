@@ -3,5 +3,3 @@
 
 This repo keep track of some configs used on the 42basecamp.
 You can copy and alter however you want. Enjoy!
-
-alo alo
