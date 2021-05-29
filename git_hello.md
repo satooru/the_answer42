@@ -1,6 +1,7 @@
-# git e uma ferramenta para rastrear as versoes dos arquivos de um projeto
+# Hello World de git???
+Git e uma ferramenta para rastrear as versoes dos arquivos de um projeto
 
-#git ou github? qual a diferenca?
+# git ou github? qual a diferenca?
 git e a ferramenta
 github e a plataforma (gitlab, bitbucket, azure, aws)
 
