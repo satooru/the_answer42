@@ -3,6 +3,7 @@ colorscheme miramare "configura tema
 set cursorline "marca linha atual do cursor
 set colorcolumn=80 "regua de 80 chars
 set number relativenumber "configura linhas hibridas
+set showcmd "mostra os comandos no modo normal
 
 set nowrap "nao ha quebra de linha
 set wildmenu "menu de sugestao
@@ -23,4 +24,3 @@ set incsearch "quando buscar por uma palavra, ele vai marcando enquanto escreve
 set hlsearch "mostra todas os resultados encontrados
 "esconde a marcacao da ultima busca usando comando ':<Enter><Enter>"
 nnoremap <silent> <Enter> :noh<Enter><Enter>
-1
