@@ -1,0 +1,33 @@
+[1] Testing strings "abcdefghi" and "abcdEfghi"
+> OK, result: 0
+> OK, result: 0
+> OK, result: 0
+> OK, result: 0
+> OK, result: 0
+> OK, result: 32
+> OK, result: 32
+> OK, result: 32
+> OK, result: 32
+> OK, result: 32
+[2] Testing strings "abcdefghi" and "abédefghi"
+> OK, result: 0
+> OK, result: 0
+> OK, result: 0
+> OK, result: -134
+> OK, result: -134
+> OK, result: -134
+> OK, result: -134
+> OK, result: -134
+> OK, result: -134
+> OK, result: -134
+[3] Testing strings "abcdEfghi" and "abédefghi"
+> OK, result: 0
+> OK, result: 0
+> OK, result: 0
+> OK, result: -134
+> OK, result: -134
+> OK, result: -134
+> OK, result: -134
+> OK, result: -134
+> OK, result: -134
+> OK, result: -134
