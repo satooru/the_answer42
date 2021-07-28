@@ -1,3 +1,27 @@
+"vim plug
+call plug#begin()
+Plug 'preservim/nerdtree'
+Plug 'neovim/nvim-lspconfig'
+call plug#end()
+
+"nerdtree
+let NERDTreeShowHidden = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows=1
+let NERDTreeStatusline = ''
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+"lsp
+"let g:LanguageClient_serverCommands = {
+"  \ 'cpp': ['clangd'],
+"  \ }
+lua << EOF
+require'lspconfig'.clangd.setup{}
+EOF
+
+set encoding=UTF-8
 syntax on "ativa sintaxe - marca palavras chave das linguagens
 colorscheme miramare "configura tema
 set cursorline "marca linha atual do cursor
