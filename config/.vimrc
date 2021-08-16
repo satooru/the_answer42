@@ -2,6 +2,7 @@
 call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'neovim/nvim-lspconfig'
+Plug 'RyanMillerC/better-vim-tmux-resizer'
 call plug#end()
 
 "nerdtree
@@ -13,12 +14,17 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-"lsp
-"let g:LanguageClient_serverCommands = {
-"  \ 'cpp': ['clangd'],
-"  \ }
 lua << EOF
 require'lspconfig'.clangd.setup{}
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = false,
+    underline = true,
+    signs = true,
+  }
+)
+vim.cmd [[autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()]]
+vim.cmd [[autocmd CursorHoldI * silent! lua vim.lsp.buf.signature_help()]]
 EOF
 
 set encoding=UTF-8
@@ -28,6 +34,7 @@ set cursorline "marca linha atual do cursor
 set colorcolumn=80 "regua de 80 chars
 set number relativenumber "configura linhas hibridas
 set showcmd "mostra os comandos no modo normal
+set updatetime=750
 
 set nowrap "nao ha quebra de linha
 set wildmenu "menu de sugestao
@@ -59,3 +66,7 @@ nnoremap <silent> <Enter> :noh<Enter><Enter>
 "inoremap { {}<left>
 "inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
+
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+source ~/.vimrc
