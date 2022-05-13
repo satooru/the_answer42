@@ -4,4 +4,4 @@ git config --global difftool.prompt false
 git config --global alias.d difftool
 git config --global alias.s status
 git config --global alias.l log
-echo 'git configurado'
+echo 'git configured'
